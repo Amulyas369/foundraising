@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundraising Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="left_side">
+            <h2 class="logo">Organisation Name</h2>
+        </div>
+        <div class="right_side">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#user-registration">Donate</a></li>
+                <li><a href="#user-registration">Register</a></li>
+            </ul>
+        </div>
+    </header>
+    <h1 class="title" id="home">[Your Organization's Name]</h1>
+<div class="hero-sec" >
+    <h1 class="qoute">In a world where you can be anything, be someone's reason to smile. 
+        Your support can be the spark that ignites hope in someone's heart<br/><a href="#user-registration" class="lets_donate"> Lets Donate <span>&#8594;</span></a></h1>
+        <div class="image"></div>
+</div>
+<p>Welcome to [Your Organization's Name] - Transforming Lives, One Act of Kindness at a Time! 🌟 Join us in making a positive impact. Explore donation opportunities, 
+    volunteer programs, and discover how you can be a catalyst for change. Together, 
+    we create a brighter future. Donate now and be the change! </p>
+<p>Every act of kindness, no matter how small, has the power to make a profound difference.
+     Join us in spreading compassion and changing lives.</p>
+
+
+
+ <div class="register_container" id="user-registration">
+    <h1>To Donate Register Here</h1>
+
+    <form  class="form">
+        <label for="firstName">First Name:<span>*</span></label>
+        <input type="text" id="firstName" placeholder="Enter first name" required>
+        <label for="lastName">Last Name:<span>*</span></label>
+        <input type="text" id="lastName" placeholder="Enter last name">
+        <label for="email">Email:<span>*</span></label>
+        <input type="email" id="email" placeholder="Enter email" required>
+        <label for="password">Password:<span>*</span></label>
+        <input type="password" id="password" placeholder="Enter password" required>
+        <label for="referralCode">Referral Code (if any):</label>
+        <input type="text" id="referralCode" placeholder="Enter referral code">
+        <button onclick="submitRegistration()" class="register" >Register</button>
+        <p >already have an account <span id="login_btn">Login</span></p>
+    </form>
+</div>
+
+<!-- for login -->
+
+<div id="login-form" style="display: none;" class="form">
+    <form>
+    <h2>Login</h2>
+    <label for="loginEmail">Email:<span>*</span></label>
+    <input type="email" id="loginEmail" placeholder="Enter email" required>
+    <label for="loginPassword">Password:<span>*</span></label>
+    <input type="password" id="loginPassword" placeholder="Enter password" required>
+    <button onclick="submitLogin()">Login</button>
+    <p >Don't have an account <span id="sign_btn">Register</span></p>
+</form>
+</div>
+
+
+
+
+    <div id="donation-form" style="display: none;" class="donation-form">
+        <div class="qr_sec">
+            <img src="qrcode.jpeg" alt="Upi ID:amulyasenapati@fbl"/>
+            <p>UPI ID: amulyasenapati@fbl</p>
+            <p class="advice" id="advice"style="display:none;"></p>
+            <h4 class="refferal_Id" id="refferal_Id"style="display:none;"></h4>
+        </div>
+        <form>
+        <h2>Make a Donation</h2>
+        <label for="donationAmount">Donation Amount:<span>*</span></label>
+        <input type="number" id="donationAmount" placeholder="Enter donation amount" required>
+        <label for="TransactionID">TransactionID:<span>*</span></label>
+        <input type="text" id="TransactionID" placeholder="Enter TransactionID" required>
+        <button onclick="submitDonation()" type="submit">Submit Donation</button>
+    </form>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
